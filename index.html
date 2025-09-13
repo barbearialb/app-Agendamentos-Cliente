@@ -5,53 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agendamentos Barbearia Lucas Borges</title>
     <link rel="manifest" href="manifest.json">
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            color: #333;
-        }
-        h1 {
-            font-size: 1.5em;
-            margin-bottom: 20px;
-        }
-        a.btn {
-            padding: 15px 30px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            transition: background-color 0.3s;
-        }
-        a.btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
-</head>
-<body>
-    <h1>Bem-vindo!</h1>
-    <p>Clique abaixo para agendar o seu horário:</p>
-    <a href="https://agendamentoonlinebarbearialb.streamlit.app/" class="btn">Agendar Agora</a>
-
     <script>
+        // Redireciona imediatamente para o site de agendamentos
+        window.location.replace("https://agendamentoonlinebarbearialb.streamlit.app/");
+
+        // Código para registrar o Service Worker (necessário para o PWA)
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js').then(reg => {
-                    console.log('Service Worker registrado com sucesso:', reg);
-                }).catch(err => {
-                    console.log('Falha ao registrar Service Worker:', err);
-                });
+                navigator.serviceWorker.register('sw.js');
             });
         }
     </script>
-</body>
+</head>
+<body>
+    </body>
 </html>
