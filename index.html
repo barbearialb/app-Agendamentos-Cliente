@@ -6,9 +6,11 @@
     <title>Agendamentos Barbearia Lucas Borges</title>
     <link rel="manifest" href="manifest.json">
     <script>
-        // Redireciona imediatamente para o site de agendamentos
-        window.location.replace("https://agendamentoonlinebarbearialb.streamlit.app/");
-
+        // Esta função garante que o redirecionamento ocorra assim que a página é carregada
+        window.onload = function() {
+            window.location.replace("https://agendamentoonlinebarbearialb.streamlit.app/");
+        };
+        
         // Código para registrar o Service Worker (necessário para o PWA)
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
