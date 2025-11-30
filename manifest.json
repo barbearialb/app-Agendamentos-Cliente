@@ -3,8 +3,8 @@
   "short_name": "Agendamentos",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#1b3b87",
-  "theme_color": "#1b3b87",
+  "background_color": "#2f3863",
+  "theme_color": "#2f3863",
   "icons": [
     {
       "src": "novo_icon_any_192.png",
